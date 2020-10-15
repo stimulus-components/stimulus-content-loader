@@ -29,8 +29,7 @@
     "dev": "snowpack dev",
     "prod": "snowpack build",
     "build": "pika build",
-    "test": "true",
-    "pika:publish": "pika publish",
+    "pika:publish": "pika publish --no-tests --no-2fa",
     "version": "yarn build"
   },
   "dependencies": {
