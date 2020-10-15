@@ -1,4 +1,4 @@
-# Stimulus components
+# Stimulus Content Loader
 
 [![](https://img.shields.io/npm/dt/stimulus-content-loader.svg)](https://www.npmjs.com/package/stimulus-content-loader)
 [![](https://img.shields.io/npm/v/stimulus-content-loader.svg)](https://www.npmjs.com/package/stimulus-content-loader)
