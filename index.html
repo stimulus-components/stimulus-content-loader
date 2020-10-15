@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Stimulus Content Loader</title>
+    <script type="module" src="./src/index.js" defer></script>
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js" defer></script>
+
+    <script type="module" defer>
+      import ContentLoader from './src/index.js'
+
+      const application = Stimulus.Application.start()
+      application.register('content-loader', ContentLoader)
+    </script>
+
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      a {
+        color: #667eea;
+        display: inline-block;
+      }
+
+      .badges a {
+        margin: 0 0.25rem;
+      }
+
+      pre code {
+        border-radius: 0.5rem;
+        text-align: left;
+        font-family: Menlo, 'Courier New', Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full max-w-6xl mx-auto my-24 p-4">
+      <h1 class="text-center mb-8 text-5xl font-bold">Stimulus Content Loader</h1>
+
+      <p class="text-center mb-4">
+        A Stimulus controller to asynchronously load HTML from an url.
+      </p>
+
+      <p class="text-center badges">
+        <a href="https://www.npmjs.com/package/stimulus-content-loader">
+          <img src="https://img.shields.io/npm/dt/stimulus-content-loader.svg" />
+        </a>
+
+        <a href="https://www.npmjs.com/package/stimulus-content-loader">
+          <img src="https://img.shields.io/npm/v/stimulus-content-loader.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-content-loader">
+          <img src="https://github.com/stimulus-components/stimulus-content-loader/workflows/Lint/badge.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-content-loader">
+          <img src="https://github.com/stimulus-components/stimulus-content-loader/workflows/Test/badge.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-content-loader">
+          <img src="https://img.shields.io/github/license/stimulus-components/stimulus-content-loader.svg" />
+        </a>
+
+        <a href="https://stimulus-components.netlify.com/">
+          <img src="https://api.netlify.com/api/v1/badges/056dda4a-4444-4c24-a854-c4b1944d35ca/deploy-status" />
+        </a>
+      </p>
+
+      <h2 class="text-center text-2xl font-bold my-4">Essential links</h2>
+
+      <ul class="text-center mb-8">
+        <li>
+          <a href="https://github.com/stimulus-components/stimulus-content-loader" target="_blank" rel="noopener">
+            Github
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.npmjs.com/package/stimulus-content-loader" target="_blank" rel="noopener">
+            Npm
+          </a>
+        </li>
+      </ul>
+
+      <section class="mt-16">
+        <h2 class="text-2xl font-bold mb-4">
+          Content loader Controller
+        </h2>
+
+        <div data-controller="content-loader" data-content-loader-url="/message.html"></div>
+      </section>
+    </div>
+  </body>
+</html>
