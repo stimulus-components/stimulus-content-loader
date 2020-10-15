@@ -1,6 +1,6 @@
 {
   "name": "stimulus-content-loader",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Stimulus controller to asynchronously load HTML from an url.",
   "repository": "git@github.com:stimulus-components/stimulus-content-loader.git",
   "author": "Guillaume Briday <guillaumebriday@gmail.com>",
