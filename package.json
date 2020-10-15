@@ -29,6 +29,7 @@
     "dev": "snowpack dev",
     "prod": "snowpack build",
     "build": "pika build",
+    "test": "true",
     "pika:publish": "pika publish",
     "version": "yarn build"
   },
