@@ -102,6 +102,7 @@ In your view:
 
 | Attribute | Default | Description | Optional |
 | --------- | ------- | ----------- | -------- |
+| `data-content-loader-url` | `undefined` | URL to fetch the content. | ❌ |
 | `data-content-loader-refresh-interval` | `undefined` | Interval in milliseconds to reload content. | ✅ |
 | `data-content-loader-lazy-loading` | `undefined` | Fetch content when element is visible. | ✅ |
 | `data-content-loader-lazy-loading-root-margin` | `0px` | rootMargin option for Intersection Observer. | ✅ |
