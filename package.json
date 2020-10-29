@@ -2,7 +2,18 @@
   "name": "stimulus-content-loader",
   "version": "1.0.0",
   "description": "A Stimulus controller to asynchronously load HTML from an url.",
+  "keywords": [
+    "stimulus",
+    "stimulusjs",
+    "stimulus controller",
+    "asynchronously load HTML",
+    "ajax",
+    "content-loader"
+  ],
   "repository": "git@github.com:stimulus-components/stimulus-content-loader.git",
+  "bugs": {
+    "url": "https://github.com/stimulus-components/stimulus-content-loader/issues"
+  },
   "author": "Guillaume Briday <guillaumebriday@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/stimulus-components/stimulus-content-loader",
