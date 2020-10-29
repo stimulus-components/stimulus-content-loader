@@ -10,6 +10,12 @@
 
 A Stimulus controller to asynchronously load HTML from an url.
 
+## Video Tutorial
+
+[Dave Kimura](https://twitter.com/kobaltz) from [Drifting Ruby](https://www.driftingruby.com/) has released a presentation video on how to use this package with a real life example.
+
+👉 Take a look: [Deferred Content Loading](https://www.driftingruby.com/episodes/deferred-content-loading)
+
 ## Installation
 
 ```bash
