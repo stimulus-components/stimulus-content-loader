@@ -117,7 +117,7 @@ In your view:
 
 ## Extending Controller
 
-You can use inheritance to extend the functionality of any Stimulus components.
+You can use inheritance to extend the functionality of any Stimulus component:
 
 ```js
 import ContentLoader from "stimulus-content-loader"
@@ -132,7 +132,7 @@ export default class extends ContentLoader {
 
 These controllers will automatically have access to targets defined in the parent class.
 
-If you override the connect, disconnect or any other methods from the parent, you'll want to call `super.method()` to make sure the parent functionality is executed.
+If you override the `connect`, `disconnect` or any other methods from the parent, you'll want to call `super.method()` to make sure the parent functionality is executed.
 
 ## Development
 
