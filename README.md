@@ -12,7 +12,7 @@ A Stimulus controller to asynchronously load HTML from an url.
 
 ## 📚 Documentation
 
-See [stimulus-timeago documentation](https://stimulus-components.netlify.app/docs/components/stimulus-timeago/).
+See [stimulus-content-loader documentation](https://stimulus-components.netlify.app/docs/components/stimulus-content-loader/).
 
 ## 👷‍♂️ Contributing
 
