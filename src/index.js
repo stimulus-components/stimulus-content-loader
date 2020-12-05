@@ -10,6 +10,12 @@ export default class extends Controller {
   }
 
   connect () {
+    if (!this.hasUrlValue) {
+      console.error('[stimulus-content-loader] You need to pass an url to fetch the remote content.')
+      return
+    }
+
+
     this.hasLazyLoadingValue ? this.lazyLoad() : this.load()
   }
 
