@@ -15,7 +15,6 @@ export default class extends Controller {
       return
     }
 
-
     this.hasLazyLoadingValue ? this.lazyLoad() : this.load()
   }
 
