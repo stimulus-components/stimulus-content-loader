@@ -1,8 +1,16 @@
 import { Controller } from 'stimulus'
 
 export default class extends Controller {
+  static values = {
+    url: String,
+    lazyLoading: Boolean,
+    lazyLoadingThreshold: Number,
+    lazyLoadingRootMargin: String,
+    refreshInterval: Number
+  }
+
   connect () {
-    this.data.has('lazyLoading') ? this.lazyLoad() : this.load()
+    this.hasLazyLoadingValue ? this.lazyLoad() : this.load()
   }
 
   disconnect () {
@@ -12,15 +20,15 @@ export default class extends Controller {
   load () {
     this.fetch()
 
-    if (this.data.has('refreshInterval')) {
+    if (this.hasRefreshIntervalValue) {
       this.startRefreshing()
     }
   }
 
   lazyLoad () {
     const options = {
-      threshold: this.data.get('lazyLoadingThreshold') || 0,
-      rootMargin: this.data.get('lazyLoadingRootMargin') || '0px'
+      threshold: this.lazyLoadingThresholdValue,
+      rootMargin: this.lazyLoadingRootMarginValue || '0px'
     }
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -37,7 +45,7 @@ export default class extends Controller {
   }
 
   fetch () {
-    fetch(this.data.get('url'))
+    fetch(this.urlValue)
       .then(response => response.text())
       .then(html => {
         this.element.innerHTML = html
@@ -47,7 +55,7 @@ export default class extends Controller {
   startRefreshing () {
     this.refreshTimer = setInterval(() => {
       this.fetch()
-    }, this.data.get('refreshInterval'))
+    }, this.refreshIntervalValue)
   }
 
   stopRefreshing () {

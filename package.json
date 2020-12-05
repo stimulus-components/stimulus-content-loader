@@ -54,9 +54,9 @@
     "@snowpack/plugin-babel": "2.1.3",
     "prettier-standard": "16.4.1",
     "snowpack": "2.14.0",
-    "stimulus": "^1.1.1"
+    "stimulus": "^2.0.0"
   },
   "peerDependencies": {
-    "stimulus": "^1.1.1"
+    "stimulus": "^2.0.0"
   }
 }
