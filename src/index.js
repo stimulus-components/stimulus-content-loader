@@ -6,7 +6,8 @@ export default class extends Controller {
     lazyLoading: Boolean,
     lazyLoadingThreshold: Number,
     lazyLoadingRootMargin: String,
-    refreshInterval: Number
+    refreshInterval: Number,
+    loadScripts: Boolean
   }
 
   connect () {
@@ -54,6 +55,10 @@ export default class extends Controller {
       .then(response => response.text())
       .then(html => {
         this.element.innerHTML = html
+
+        if (this.loadScriptsValue) {
+          this.loadScripts()
+        }
       })
   }
 
@@ -67,5 +72,14 @@ export default class extends Controller {
     if (this.refreshTimer) {
       clearInterval(this.refreshTimer)
     }
+  }
+
+  loadScripts () {
+    this.element.querySelectorAll('script').forEach(content => {
+      const script = document.createElement('script')
+      script.innerHTML = content.innerHTML
+
+      document.head.appendChild(script).parentNode.removeChild(script)
+    })
   }
 }
