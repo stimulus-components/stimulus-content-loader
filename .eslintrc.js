@@ -6,8 +6,7 @@ module.exports = {
     node: true,
     es6: true
   },
-
-  globals: {
-    page: 'readonly'
+  parserOptions: {
+    sourceType: "module"
   }
 }

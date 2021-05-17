@@ -18,43 +18,27 @@
   "license": "MIT",
   "homepage": "https://github.com/stimulus-components/stimulus-content-loader",
   "private": false,
-  "esnext": "dist-src/index.js",
-  "main": "dist-node/index.js",
-  "module": "dist-web/index.js",
-  "@pika/pack": {
-    "pipeline": [
-      [
-        "@pika/plugin-standard-pkg"
-      ],
-      [
-        "@pika/plugin-build-web"
-      ],
-      [
-        "@pika/plugin-build-node"
-      ]
-    ]
-  },
+  "main": "dist/stimulus-content-loader.umd.js",
+  "module": "dist/stimulus-content-loader.es.js",
   "scripts": {
-    "format": "prettier-standard  '**/*.{js,css,html}' --format",
-    "lint": "prettier-standard  '**/*.{js,css,html}' --lint",
-    "dev": "snowpack dev",
-    "prod": "snowpack build",
-    "build": "pika build",
-    "pika:publish": "pika publish --no-tests --no-2fa",
-    "version": "yarn build"
+    "format": "prettier-standard  '**/*.{ts,css,html}' --format",
+    "lint": "prettier-standard  '**/*.{ts,css,html}' --lint",
+    "dev": "vite",
+    "prod": "vite build --mode netlify",
+    "build": "tsc --noEmit && vite build",
+    "version": "yarn build",
+    "np": "np --no-2fa --no-test"
   },
   "devDependencies": {
     "@babel/core": "7.11.6",
     "@babel/plugin-syntax-class-properties": "7.10.4",
-    "@babel/preset-env": "7.11.5",
-    "@pika/pack": "0.5.0",
-    "@pika/plugin-build-node": "0.9.2",
-    "@pika/plugin-build-web": "0.9.2",
-    "@pika/plugin-standard-pkg": "0.9.2",
-    "@snowpack/plugin-babel": "2.1.3",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.13.0",
+    "np": "^7.5.0",
     "prettier-standard": "16.4.1",
-    "snowpack": "2.14.0",
-    "stimulus": "^2.0.0"
+    "stimulus": "^2.0.0",
+    "typescript": "^4.2.4",
+    "vite": "^2.3.3"
   },
   "peerDependencies": {
     "stimulus": "^2.0.0"
