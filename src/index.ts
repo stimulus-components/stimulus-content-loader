@@ -1,4 +1,4 @@
-import { Controller } from 'stimulus'
+import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
   refreshTimer: number
@@ -18,7 +18,10 @@ export default class extends Controller {
     url: String,
     lazyLoading: Boolean,
     lazyLoadingThreshold: Number,
-    lazyLoadingRootMargin: String,
+    lazyLoadingRootMargin: {
+      type: String,
+      default: '0px'
+    },
     refreshInterval: Number,
     loadScripts: Boolean
   }
@@ -47,7 +50,7 @@ export default class extends Controller {
   lazyLoad (): void {
     const options: IntersectionObserverInit = {
       threshold: this.lazyLoadingThresholdValue,
-      rootMargin: this.lazyLoadingRootMarginValue || '0px'
+      rootMargin: this.lazyLoadingRootMarginValue
     }
 
     const observer = new IntersectionObserver(
