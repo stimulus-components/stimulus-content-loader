@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.1] - 2022-04-03
+
+### Chore
+
+- Upgrading dependencies
+- Setting Stimulus as external dependency reducing bundle size from `2.20 KiB` to `0.70 KiB`.
+
 ## [4.0.0] - 2021-09-27
 
 ### Chore

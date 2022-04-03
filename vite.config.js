@@ -22,10 +22,10 @@ export default ({ mode }) => {
         name: 'stimulus-content-loader'
       },
       rollupOptions: {
-        external: ['stimulus'],
+        external: ['@hotwired/stimulus'],
         output: {
           globals: {
-            stimulus: 'Stimulus'
+            '@hotwired/stimulus': 'Stimulus'
           }
         }
       }
