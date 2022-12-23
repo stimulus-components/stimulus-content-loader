@@ -11,3 +11,5 @@ vite.config.js
 .prettierignore
 .prettierrc
 .eslintignore
+postcss.config.js
+tailwind.config.js
