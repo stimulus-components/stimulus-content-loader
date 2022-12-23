@@ -1,14 +1,15 @@
-import path from 'path'
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
 
-export default ({ mode }) => {
+export default defineConfig(({ mode }) => {
   if (mode === 'netlify') {
     return {
       build: {
         rollupOptions: {
           input: {
-            index: path.resolve(__dirname, 'index.html'),
-            message: path.resolve(__dirname, 'message.html'),
-            with_javascript: path.resolve(__dirname, 'with_javascript.html'),
+            index: resolve(__dirname, 'index.html'),
+            message: resolve(__dirname, 'message.html'),
+            with_javascript: resolve(__dirname, 'with_javascript.html'),
           }
         }
       }
@@ -18,8 +19,9 @@ export default ({ mode }) => {
   return {
     build: {
       lib: {
-        entry: path.resolve(__dirname, 'src/index.ts'),
-        name: 'stimulus-content-loader'
+        entry: resolve(__dirname, 'src/index.ts'),
+        name: 'StimulusContentLoader',
+        fileName: 'stimulus-content-loader'
       },
       rollupOptions: {
         external: ['@hotwired/stimulus'],
@@ -31,4 +33,4 @@ export default ({ mode }) => {
       }
     }
   }
-}
+})
