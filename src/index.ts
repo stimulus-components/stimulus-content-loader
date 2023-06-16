@@ -95,10 +95,12 @@ export default class extends Controller {
 
   loadScripts (): void {
     this.element.querySelectorAll('script').forEach((content: HTMLScriptElement) => {
-      const script: HTMLScriptElement = document.createElement('script')
-      script.innerHTML = content.innerHTML
+      if (!content.type || content.type.indexOf('script')) {
+        const script: HTMLScriptElement = document.createElement('script')
+        script.innerHTML = content.innerHTML
 
-      document.head.appendChild(script).parentNode.removeChild(script)
+        document.head.appendChild(script).parentNode.removeChild(script)
+      }
     })
   }
 }
