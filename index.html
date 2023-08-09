@@ -14,6 +14,14 @@
 
       const application = Application.start()
       application.register('content-loader', ContentLoader)
+
+      document.addEventListener('content-loader:success', () => {
+        console.log('Content loaded successfully.')
+      })
+
+      document.addEventListener('content-loader:error', e => {
+        console.error('Something went wrong', e.detail.error)
+      })
     </script>
   </head>
 

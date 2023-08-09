@@ -71,18 +71,24 @@ export default class extends Controller {
 
   fetch (): void {
     fetch(this.urlValue)
-      .then((response: Response) => response.text())
+      .then((response: Response) => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+
+        return response.text()
+      })
       .then((html: string) => {
         this.element.innerHTML = html
-
-        this.dispatch('content-loader:loaded')
 
         if (this.loadScriptsValue) {
           this.loadScripts()
         }
+
+        this.dispatch('success')
       })
-      .catch(function (error) {
-        this.dispatch('content-loader:failed', { detail: { error: error } })
+      .catch(error => {
+        this.dispatch('error', { detail: { error: error } })
       })
   }
 
