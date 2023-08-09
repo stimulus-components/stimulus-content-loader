@@ -6,6 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.2.0] - 2023-08-08
+
+### Added
+- The controller now dispatches two events `success` and `error` so you can trigger actions accordingly.
+
+Example:
+```js
+// On `document` or on the element directly.
+document.addEventListener('content-loader:success', () => {
+  console.log('Content loaded successfully.')
+})
+
+document.addEventListener('content-loader:error', (e) => {
+  console.error('Something went wrong.', e.detail.error)
+})
+```
+
 ## [4.1.0] - 2022-12-23
 
 ### Added
