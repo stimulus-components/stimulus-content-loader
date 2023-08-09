@@ -75,9 +75,14 @@ export default class extends Controller {
       .then((html: string) => {
         this.element.innerHTML = html
 
+        this.dispatch('content-loader:loaded')
+
         if (this.loadScriptsValue) {
           this.loadScripts()
         }
+      })
+      .catch(function (error) {
+        this.dispatch('content-loader:failed', { detail: { error: error } })
       })
   }
 
