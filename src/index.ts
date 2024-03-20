@@ -1,6 +1,6 @@
 import { Controller } from '@hotwired/stimulus'
 
-export default class extends Controller {
+export default class ContentLoader extends Controller<HTMLElement> {
   refreshTimer: number
   hasUrlValue: boolean
   hasLazyLoadingValue: boolean
@@ -10,9 +10,6 @@ export default class extends Controller {
   urlValue: string
   loadScriptsValue: boolean
   refreshIntervalValue: number
-
-  // @ts-ignore
-  element: HTMLElement
 
   static values = {
     url: String,
@@ -88,7 +85,7 @@ export default class extends Controller {
         this.dispatch('success')
       })
       .catch(error => {
-        this.dispatch('error', { detail: { error: error } })
+        this.dispatch('error', { detail: { error } })
       })
   }
 

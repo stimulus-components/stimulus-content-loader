@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.0] - 2024-03-17
+
+### Chore
+
+- Renaming the component from `stimulus-content-loader` to `@stimulus-components/content-loader`
+- Upgrading dependencies
+- Exporting Typescript Types
+- Updating demo UI
+- Add [Stimulus LSP](https://github.com/marcoroth/stimulus-lsp) compatibility
+
 ## [4.2.0] - 2023-08-08
 
 ### Added
