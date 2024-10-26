@@ -1,22 +1,13 @@
 # Stimulus Content Loader
 
-[![](https://img.shields.io/npm/dt/stimulus-content-loader.svg)](https://www.npmjs.com/package/stimulus-content-loader)
-[![](https://img.shields.io/npm/v/stimulus-content-loader.svg)](https://www.npmjs.com/package/stimulus-content-loader)
-[![](https://github.com/stimulus-components/stimulus-content-loader/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-content-loader)
-[![](https://img.shields.io/github/license/stimulus-components/stimulus-content-loader.svg)](https://github.com/stimulus-components/stimulus-content-loader)
+## 🚚 📦 This project has moved
 
-## Getting started
-
-A Stimulus controller to asynchronously load HTML from an url.
+This repository is now maintained in the main [Stimulus Components monorepo](https://github.com/stimulus-components/stimulus-components).
 
 ## 📚 Documentation
 
-See [stimulus-content-loader documentation](https://www.stimulus-components.com/docs/stimulus-content-loader/).
-
-## 👷‍♂️ Contributing
-
-Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
+Visit the [stimulus-content-loader documentation](https://www.stimulus-components.com/docs/stimulus-content-loader/) for more information on how to use and integrate this controller.
 
 ## 📝 License
 
-This project is released under the [MIT](http://opensource.org/licenses/MIT) license.
+This project remains licensed under the [MIT](http://opensource.org/licenses/MIT) license.
